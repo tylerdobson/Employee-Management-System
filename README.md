@@ -1,0 +1,2 @@
+# Employee-Management-System
+Using OOP to Model Roles and Hierarchies; an object-oriented system to manage employees and managers using JavaScript classes. This is a simplified employee management system that highlights object-oriented principles such as encapsulation, inheritance, and method overriding.
