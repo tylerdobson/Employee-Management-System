@@ -1,25 +1,21 @@
-# Coding Challenge 05 — Payroll Processing Toolkit
+# Coding Challenge 06 — Employee Management System
 
-A JavaScript toolkit of reusable functions that automate payroll math —
-base pay, time-and-a-half overtime, and a 15% tax deduction — then process
-an array of employees into a full payroll report.
+A simple employee management system written in JavaScript (`cc_6.js`) using
+ES6 class syntax to model employees, managers, and a company roster.
 
-## Functions
-| Function | What it does |
-|----------|--------------|
-| `calculateBasePay(rate, hours)`     | Pay for up to 40 hours (overtime ignored here) |
-| `calculateOvertimePay(rate, hours)` | 1.5× rate for every hour over 40 (0 if ≤ 40)   |
-| `calculateTaxes(grossPay)`          | Applies a 15% deduction and returns net pay     |
-| `processPayroll(employee)`        
-
-## Pay rules
-- **Regular:** hours up to 40, paid at the hourly rate
-- **Overtime:** hours above 40, paid at 1.5× the hourly rate
-- **Tax:** 15% deducted from gross to get net pay
+## What `cc_6.js` does
+- **`Employee`** — base class with `name` and `department`, and a `describe()`
+  method that returns a formatted summary of the employee.
+- **`Manager`** — subclass that `extends Employee`, calls `super(name, department)`,
+  adds `teamSize`, and overrides `describe()` to include team details.
+- **`Company`** — holds an `employees` array with `addEmployee(employee)` to add
+  people and `listEmployees()` to log every description.
+- Creates three employees and two managers, adds them all to a company, and
+  prints the full roster to the console.
 
 ## Files
-- `cc_5.js` — the payroll toolkit
-- `index.html` — loads `cc_5.js`; open it and check the browser console for output
+- `cc_6.js` — all classes and the demo code
+- `index.html` — loads `cc_6.js` in the browser
 
 
 
